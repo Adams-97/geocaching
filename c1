@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" href="styles.css">
+	 
+</head>
+<body>
+<h1>Challenge #1</h1>
+<p>
+Hmmmmmm....That's really outta the <b>blue</b>!? Why is that there?
+</p>
+<p> <i> Number of characters: 7</i></p>
+<input id="numb">
+
+<button type="button" id="btn">Submit</button>
+
+<p id="demo"></p>
+
+<div id="formArea" class="hidden ">
+Incredible, you actually decided to lift up that blue post..
+<br>You are very brave...there could have been spiders
+<br>Anyways, to prove you have completed this challenge please record one of you singing these lyrics
+<br>Please submit to group chat!
+<br>
+<br>I'm not afraid (I'm not afraid)
+<br>To take a stand (to take a stand)
+<br>Everybody (everybody)
+<br>Come take my hand come (come take my hand)
+<br>We'll walk this road together, through the storm
+<br>Whatever weather, cold or warm
+<br>Just letting you know that, you're not alone
+<br>Holla if you feel like you've been down the same road 
+</div>
+
+<script>
+
+var btn = document.getElementById("btn");
+var input = document.getElementById("numb");
+var output = document.getElementById("demo"); 
+var formArea = document.getElementById("formArea"); 
+
+var zips = ["a182423"];
+
+btn.addEventListener("click", function() {
+    var result = null;
+
+    // indexOf() returns -1 when the supplied value isn't present
+    if(zips.indexOf(numb.value.toLowerCase()) > -1){
+      result =  "Correct!!!";
+      
+      // Show the form by removing the hidden class
+      formArea.classList.remove("hidden");
+    } 
+    else {
+      result = "Incorrect Please Try Again!!";
+      // Hide the form by adding the hidden class
+      formArea.classList.add("hidden");      
+    }
+    output.textContent = result;
+
+});
+
+</script>
+</body>
+</html>
+
+
