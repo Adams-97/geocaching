@@ -1,0 +1,11 @@
+#formArea{
+  border:2px double grey;
+  width:50%;
+  box-shadow:2px 2px 0 #303030;
+  height:300px;
+  padding:5px;
+}
+
+.hidden { 
+  display:none; 
+}
