@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" href="styles.css">
+	 
+</head>
+<body>
+<h1>Challenge #8</h1>
+<p>
+This is a real Geocache!
+<br> What is the name of the first person on the log?
+</p>
+<p> <i> Number of characters: 4</i></p>
+<input id="numb">
+
+<button type="button" id="btn">Submit</button>
+
+<p id="demo"></p>
+
+<div id="formArea" class="hidden ">
+YOOOOO! You've found it! But not before LIAM!
+<br> wait Liam?? ... liam...liam... LIKE LIAM FROM ONE DIRECTION LIAM???
+<br> To prove you have found it please send a video of you guys singing the chorus of "You don't know your beautiful"
+<br> 
+<br> Lyrics:
+<br>Baby you light up my world like nobody else
+<br>The way that you flip your hair gets me overwhelmed
+<br>But when you smile at the ground it ain't hard to tell
+<br>You don't know, oh oh
+<br>You don't know you're beautiful
+</div>
+
+<script>
+
+var btn = document.getElementById("btn");
+var input = document.getElementById("numb");
+var output = document.getElementById("demo"); 
+var formArea = document.getElementById("formArea"); 
+
+var zips = ["liam"];
+
+btn.addEventListener("click", function() {
+    var result = null;
+
+    // indexOf() returns -1 when the supplied value isn't present
+    if(zips.indexOf(numb.value.toLowerCase()) > -1){
+      result =  "Correct!!!";
+      
+      // Show the form by removing the hidden class
+      formArea.classList.remove("hidden");
+    } 
+    else {
+      result = "Incorrect Please Try Again!!";
+      // Hide the form by adding the hidden class
+      formArea.classList.add("hidden");      
+    }
+    output.textContent = result;
+
+});
+
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" href="styles.css">
+	 
+</head>
+<body>
+<h1>Challenge #2</h1>
+<p>
+Whoa! That's so cool they have this here!
+<br> [Insert meme here]
+<br> Whoaaa! Loook at alll thhooossee "________"
+</p>
+<p> <i> Number of characters: 6</i></p>
+<input id="numb">
+
+<button type="button" id="btn">Submit</button>
+
+<p id="demo"></p>
+
+<div id="formArea" class="hidden ">
+Yes I know that required some meme knowledge
+<br> But props to figuring out what it was
+<br>To prove you've completed this challenge please record one of you doing the dramatic chipmunk meme!
+<br> Link: <a href="https://www.youtube.com/watch?v=a1Y73sPHKxw">https://www.youtube.com/watch?v=a1Y73sPHKxw</a>
+</div>
+
+<script>
+
+var btn = document.getElementById("btn");
+var input = document.getElementById("numb");
+var output = document.getElementById("demo"); 
+var formArea = document.getElementById("formArea"); 
+
+var zips = ["sheeps"];
+
+btn.addEventListener("click", function() {
+    var result = null;
+
+    // indexOf() returns -1 when the supplied value isn't present
+    if(zips.indexOf(numb.value.toLowerCase()) > -1){
+      result =  "Correct!!!";
+      
+      // Show the form by removing the hidden class
+      formArea.classList.remove("hidden");
+    } 
+    else {
+      result = "Incorrect Please Try Again!!";
+      // Hide the form by adding the hidden class
+      formArea.classList.add("hidden");      
+    }
+    output.textContent = result;
+
+});
+
+</script>
+</body>
+</html>
+
+

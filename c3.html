@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" href="styles.css">
+	 
+</head>
+<body>
+<h1>Challenge #3</h1>
+<p>
+Oh.. it's not plastic waste, it's a sign!
+<br> "Halton Region"
+<br> F.O. "_________"
+</p>
+<p> <i> Number of characters: 5</i></p>
+<input id="numb">
+
+<button type="button" id="btn">Submit</button>
+
+<p id="demo"></p>
+
+<div id="formArea" class="hidden ">
+Please don't ACTUALLY call 911
+<br> Fiber Optics don't actually carry eletricty they carry light so you should be safe!
+<br> You are really going above and beyond to find these eh?
+<br> Look up and ahead you see that hill with rocks.
+<br> You know what I want you to do right?
+<br> To prove you've completed the challenge please recreate this photo and send to group chat
+<br> <img src="jack.jpg" alt="Italian Trulli">
+</div>
+
+<script>
+
+var btn = document.getElementById("btn");
+var input = document.getElementById("numb");
+var output = document.getElementById("demo"); 
+var formArea = document.getElementById("formArea"); 
+
+var zips = ["cable"];
+
+btn.addEventListener("click", function() {
+    var result = null;
+
+    // indexOf() returns -1 when the supplied value isn't present
+    if(zips.indexOf(numb.value.toLowerCase()) > -1){
+      result =  "Correct!!!";
+      
+      // Show the form by removing the hidden class
+      formArea.classList.remove("hidden");
+    } 
+    else {
+      result = "Incorrect Please Try Again!!";
+      // Hide the form by adding the hidden class
+      formArea.classList.add("hidden");      
+    }
+    output.textContent = result;
+
+});
+
+</script>
+</body>
+</html>
+
+
